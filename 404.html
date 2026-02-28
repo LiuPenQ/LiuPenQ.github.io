@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - 页面未找到</title>
+  <script>
+    // GitHub Pages SPA 路由回退
+    (function () {
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/interview-flow/' +
+        '#/' +
+        l.pathname.slice(1).split('/').map(function (c) { return encodeURIComponent(c); }).join('/') +
+        (l.search ? '?' + l.search.slice(1) : '') +
+        (l.hash ? l.hash : '')
+      );
+    })();
+  </script>
+</head>
+<body>
+  <noscript>
+    <h1>页面未找到</h1>
+    <p>请确保 JavaScript 已启用</p>
+  </noscript>
+</body>
+</html>
